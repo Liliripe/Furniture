@@ -1,26 +1,26 @@
 export default [
   {
-    path: '/collections',
+    path: '#',
     text: 'Collections',
   },
   {
-    path: '/apartment',
+    path: '#',
     text: 'Apartment',
   },
   {
-    path: '/professionals',
+    path: '#',
     text: 'Professionals',
   },
   {
-    path: '/news',
+    path: '#',
     text: 'News',
   },
   {
-    path: '/about-us',
+    path: '#',
     text: 'About Us',
   },
   {
-    path: '/contact',
+    path: '#',
     text: 'Contact',
   },
 ]
