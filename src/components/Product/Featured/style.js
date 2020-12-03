@@ -19,6 +19,11 @@ export const StyledContainer = styled(Container)`
     width: 100%;
     height: 100%;
     max-width: ${props => props.theme.sizes.maxWidthMedium};
+
+    @media screen and (max-width: ${props => props.theme.responsive.medium}) {
+        max-width: ${props => props.theme.sizes.maxWidth};
+        padding-bottom: 50px;
+    }
 `
 export const StyledRow = styled(Row)`
     width: 100%;
@@ -65,6 +70,10 @@ export const Collection = styled.div`
 export const Name = styled.div`
     font-size: ${props => props.theme.fontSize.large};
     letter-spacing: -1px;
+
+    @media screen and (max-width: ${props => props.theme.responsive.medium}) {
+        font-size: ${props => props.theme.fontSize.xmedium};
+    }
 `
 export const StyledModal = styled(Modal)`
     display: flex !important;

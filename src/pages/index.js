@@ -31,6 +31,10 @@ const StyledContainer = styled(Container)`
 `
 const StyledRow = styled(Row)`
   width: 100%;
+
+  @media screen and (max-width: ${props => props.theme.responsive.medium}) {
+    margin: 0;
+  }
 `
 const Title = styled.h5`
   text-align: center;

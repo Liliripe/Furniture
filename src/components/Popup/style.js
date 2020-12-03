@@ -1,8 +1,17 @@
 import styled from 'styled-components'
+import Modal from 'react-bootstrap/Modal'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import BackgroundImage from 'gatsby-background-image'
 
+export const StyledHeader = styled(Modal.Header)`
+    border: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 99999;
+    right: 10px;
+    top: 10px;
+`
 export const StyledContainer = styled(Container)`
     padding-left: 0;
 

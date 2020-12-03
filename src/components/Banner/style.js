@@ -16,6 +16,11 @@ export const Title = styled.p`
     font-size: ${props => props.theme.fontSize.large};
     color: ${props => props.theme.colors.green};
     margin: 0 0 5vh;
+
+    @media screen and (max-width: ${props => props.theme.responsive.large}) {
+        font-size: ${props => props.theme.fontSize.xmedium};
+        text-align: center;
+    }
 `
 export const StyledLink = styled(Link)`
     display: block;

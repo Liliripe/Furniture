@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
 import {
+  StyledHeader,
   StyledContainer,
   StyledCol,
   StyledText,
@@ -26,46 +27,50 @@ export default function Popup() {
         }
       `}
       render={(data) => (
-        <Modal.Body>
-          <StyledContainer fluid>
-            <Row>
-              <StyledCol xs={12} md={6}>
-                <StyledImage
-                  Tag="div"
-                  className="popup-img"
-                  fluid={data.popup1.childImageSharp.fluid}
-                />
-              </StyledCol>
+        <>
+          <StyledHeader closeButton />
 
-              <StyledText xs={12} md={6}>
-                <Body>
-                  <h2>This is a conceptual website.</h2>
-                  <hr />
-                  <p>&nbsp;</p>
-                  <p>
-                    This site was created as a portfolio project to demonstrate
-                    capabilities in React & Gatsby. Design based on{' '}
-                    <Link
-                      to="https://rededition.com/en"
-                      style={{ textDecoration: 'underline ' }}
-                    >
-                      Red Edition
-                    </Link>
-                    .
-                  </p>
-                  {/* <p>&nbsp;</p> */}
-                  {/* <p>
-                    Visit my full portfolio at{' '}
-                    <Link to="/" style={{ textDecoration: 'underline ' }}>
-                      Rossi Studio
-                    </Link>
-                    .
-                  </p> */}
-                </Body>
-              </StyledText>
-            </Row>
-          </StyledContainer>
-        </Modal.Body>
+          <Modal.Body>
+            <StyledContainer fluid>
+              <Row>
+                <StyledCol xs={12} md={6}>
+                  <StyledImage
+                    Tag="div"
+                    className="popup-img"
+                    fluid={data.popup1.childImageSharp.fluid}
+                  />
+                </StyledCol>
+
+                <StyledText xs={12} md={6}>
+                  <Body>
+                    <h2>This is a conceptual website.</h2>
+                    <hr />
+                    <p>&nbsp;</p>
+                    <p>
+                      This site was created as a portfolio project to demonstrate
+                      capabilities in React & Gatsby. Design based on{' '}
+                      <Link
+                        to="https://rededition.com/en"
+                        style={{ textDecoration: 'underline ' }}
+                      >
+                        Red Edition
+                      </Link>
+                      .
+                    </p>
+                    {/* <p>&nbsp;</p> */}
+                    {/* <p>
+                      Visit my full portfolio at{' '}
+                      <Link to="/" style={{ textDecoration: 'underline ' }}>
+                        Rossi Studio
+                      </Link>
+                      .
+                    </p> */}
+                  </Body>
+                </StyledText>
+              </Row>
+            </StyledContainer>
+          </Modal.Body>
+        </>
       )}
     />
   )

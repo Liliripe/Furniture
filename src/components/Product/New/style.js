@@ -6,6 +6,10 @@ export const Background = styled.div`
   width: 100vw;
   padding: 30vh 0 5vh;
   background-color: ${(props) => props.theme.colors.yellow};
+
+  @media screen and (max-width: ${props => props.theme.responsive.medium}) {
+    padding: 15vh 0 5vh;
+  }
 `
 export const Text = styled.div`
   display: flex;
