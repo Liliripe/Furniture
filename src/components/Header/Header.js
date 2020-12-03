@@ -13,14 +13,28 @@ const Header = () => {
       <>
         <HeaderWrap
           fluid
+          data-scroll
+          data-scroll-speed="2"
+          data-scroll-position="top"
         >
-          <div>
+          <Animation
+            animate={{
+              opacity: ['0%', '100%'],
+            }}
+            transition={{
+              delay: 1.9,
+              duration: 0.7,
+              ease: 'easeInOut',
+              times: [0, 1],
+              loop: false,
+            }}
+          >
             <StyledRow>
               <Logo open={open} setOpen={setOpen} />
               <Nav />
               <Account open={open} setOpen={setOpen} />
             </StyledRow>
-          </div>
+          </Animation>
         </HeaderWrap>
 
         <Drawer open={open} setOpen={setOpen} />

@@ -4,11 +4,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-import { 
-  StyledBackground, 
-  Text, 
-  Inner
-} from './style'
+import { PinkBg, SliderWrap, StyledBackground, Text, Inner, Title, Discover } from './style'
 
 export default function Hero() {
   var settings = {
@@ -56,10 +52,34 @@ export default function Hero() {
       `}
       render={(data) => (
         <>
-          <div
+          <PinkBg
+            animate={{
+              top: ['150vh', '0vh', '0vh'],
+              height: ['0vh', '100vh', '0vh'],
+            }}
+            transition={{
+              delay: 1,
+              duration: 1,
+              ease: 'easeInOut',
+              times: [0, 0.5, 1],
+              loop: false,
+            }}
           />
 
-          <div
+          <SliderWrap
+            data-scroll
+            data-scroll-speed="1"
+            data-scroll-position="top"
+            animate={{
+              opacity: ['0%', '100%'],
+            }}
+            transition={{
+              delay: 0,
+              duration: 1,
+              ease: 'easeInOut',
+              times: [0, 1],
+              loop: false,
+            }}
           >
             <Slider {...settings}>
               <div>
@@ -71,14 +91,34 @@ export default function Hero() {
                 >
                   <Text>
                     <Inner>
-                      <div
+                      <Title
+                        animate={{
+                          opacity: ['0%', '100%'],
+                        }}
+                        transition={{
+                          delay: 2,
+                          duration: 0.8,
+                          ease: 'easeInOut',
+                          times: [0, 1],
+                          loop: false,
+                        }}
                       >
                         Cane Sofa<sup>210</sup>
-                      </div>
-                      <div
+                      </Title>
+                      <Discover
+                        animate={{
+                          opacity: ['0%', '100%'],
+                        }}
+                        transition={{
+                          delay: 2.2,
+                          duration: 0.8,
+                          ease: 'easeInOut',
+                          times: [0, 1],
+                          loop: false,
+                        }}
                       >
                         <Link to="/">Discover</Link>
-                      </div>
+                      </Discover>
                     </Inner>
                   </Text>
                 </StyledBackground>
@@ -92,14 +132,34 @@ export default function Hero() {
                 >
                   <Text>
                     <Inner>
-                      <div
+                      <Title
+                        animate={{
+                          opacity: ['0%', '100%'],
+                        }}
+                        transition={{
+                          delay: 2,
+                          duration: 0.8,
+                          ease: 'easeInOut',
+                          times: [0, 1],
+                          loop: false,
+                        }}
                       >
                         Cane Sofa<sup>210</sup>
-                      </div>
-                      <div
+                      </Title>
+                      <Discover
+                        animate={{
+                          opacity: ['0%', '100%'],
+                        }}
+                        transition={{
+                          delay: 2.2,
+                          duration: 0.8,
+                          ease: 'easeInOut',
+                          times: [0, 1],
+                          loop: false,
+                        }}
                       >
                         <Link to="/">Discover</Link>
-                      </div>
+                      </Discover>
                     </Inner>
                   </Text>
                 </StyledBackground>
@@ -113,20 +173,40 @@ export default function Hero() {
                 >
                   <Text>
                     <Inner>
-                      <div
+                      <Title
+                        animate={{
+                          opacity: ['0%', '100%'],
+                        }}
+                        transition={{
+                          delay: 2,
+                          duration: 0.8,
+                          ease: 'easeInOut',
+                          times: [0, 1],
+                          loop: false,
+                        }}
                       >
                         Cane Sofa<sup>210</sup>
-                      </div>
-                      <div
+                      </Title>
+                      <Discover
+                        animate={{
+                          opacity: ['0%', '100%'],
+                        }}
+                        transition={{
+                          delay: 2.2,
+                          duration: 0.8,
+                          ease: 'easeInOut',
+                          times: [0, 1],
+                          loop: false,
+                        }}
                       >
                         <Link to="/">Discover</Link>
-                      </div>
+                      </Discover>
                     </Inner>
                   </Text>
                 </StyledBackground>
               </div>
             </Slider>
-          </div>
+          </SliderWrap>
         </>
       )}
     />
