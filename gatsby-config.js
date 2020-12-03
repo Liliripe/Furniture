@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Red Alder`,
     description: `A portfolio site for demonstration purposes.`,
-    author: `@gatsbyjs`,
+    author: `madebyrossi.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,6 +13,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/content`,
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-layout`,
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -21,14 +31,19 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `alice\:400,400i,`,
+          `montserrat\:100,400,400i,600,800`,
+          `italiana\:400,600,800`,
+        ],
+        display: 'swap',
+      },
+    },
   ],
 }
