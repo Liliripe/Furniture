@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row'
 import SEO from '../helpers/seo'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
-// import Featured from '../components/Product/Featured'
+import Featured from '../components/Product/Featured'
 // import New from '../components/Product/New'
 // import Product from '../components/Product'
 // import Banner from '../components/Banner'
@@ -76,8 +76,8 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
       <Header />
       <Hero />
-      {/* <Featured />
-      <New />
+      <Featured />
+      {/* <New />
       <ProductWrap data-scroll data-scroll-speed="1" data-scroll-position="top">
         <Title>Our must-haves</Title>
         <StyledContainer fluid>
