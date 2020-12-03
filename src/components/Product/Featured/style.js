@@ -30,12 +30,19 @@ export const StyledRow = styled(Row)`
     height: 100%;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: ${props => props.theme.responsive.medium}) {
+        margin: 0;
+    }
 `
 export const StyledCol = styled(Col)`
     height: 85vh;
 
     @media screen and (max-width: ${props => props.theme.responsive.large}) {
         height: 400px;
+    }
+    @media screen and (max-width: ${props => props.theme.responsive.medium}) {
+        margin-bottom: 25px;
     }
 `
 export const StyledBackground = styled(BackgroundImage)`

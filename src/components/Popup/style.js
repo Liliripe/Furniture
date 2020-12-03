@@ -11,6 +11,19 @@ export const StyledHeader = styled(Modal.Header)`
     z-index: 99999;
     right: 10px;
     top: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        opacity: 1 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 `
 export const StyledContainer = styled(Container)`
     padding-left: 0;
