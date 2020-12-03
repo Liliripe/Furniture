@@ -69,7 +69,6 @@ const IndexPage = ({ data }) => {
       el: scrollRef.current,
       smooth: true,
     })
-    setTimeout(() => scroll.update(), 300);
   })
 
   return (
